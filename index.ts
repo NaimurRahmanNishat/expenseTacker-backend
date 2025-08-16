@@ -49,7 +49,7 @@ async function bootstrap() {
 
 // Default route
 app.get("/", (req, res) => {
-  res.send("Hello from Main Index!");
+  res.send("Expense Tracker server is running!");
 });
 
 bootstrap();
