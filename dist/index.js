@@ -16,7 +16,7 @@ const cookie_parser_1 = __importDefault(require("cookie-parser"));
 app.use(express_1.default.json({ limit: "20mb" }));
 app.use(express_1.default.urlencoded({ extended: true, limit: "20mb" }));
 app.use((0, cors_1.default)({
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173", "https://expense-tacker-frontend-ashy.vercel.app"],
     credentials: true
 }));
 app.use((0, cookie_parser_1.default)());
@@ -47,6 +47,6 @@ async function bootstrap() {
 }
 // Default route
 app.get("/", (req, res) => {
-    res.send("Hello from Main Index!");
+    res.send("Expense Tracker server is running!");
 });
 bootstrap();
